@@ -1,39 +1,36 @@
-﻿@model Solomon.Models.Article
-
-@{
-    Layout = null;
-}
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html class="nojs html css_verticalspacer" lang="ru-RU">
- <head>
 
-  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<head>
 
-  <title>Solomon</title>
-  <!-- CSS -->
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Solomon</title>
+    <!-- CSS -->
 
 
-  <link rel="stylesheet" type="text/css" href="~/Content/css/site_global.css?crc=444006867"/>
-  <link rel="stylesheet" type="text/css" href="~/Content/css/index.css?crc=4249096523" id="pagesheet"/>
-   </head>
- <body>
-<div id="head">
+    <link rel="stylesheet" type="text/css" href="~/Content/css/site_global.css?crc=444006867" />
+    <link rel="stylesheet" type="text/css" href="~/Content/css/index.css?crc=4249096523" id="pagesheet" />
+</head>
 
-</div>
+<body>
+    <div id="head">
+        <div style="padding: 12px; float: left;"><img src="~/Content/img/logo.png" alt="solomon"></div><div style="padding: 12px; float:  right;"><img src="~/Content/img/lk.png" width="300px" alt="solomon" style="padding-right: 30px;"></div>
+    </div>
 
-<div id="content">
- 
-<table  border="0px" width="100%">
+    <div id="content">
+
+        <table cellpadding="0" <table cellspacing="0" border="0px" width="100%">
 <tr>
 <td width="24%" valign="top">
 	<div id="menu">
 	<ul>
-		<li><a href="#">Ожидают обработки</a></li>
+		<li><a href="#">Ожидают обработки</a> <span>126</span></li>
 		<li><a href="#">Обработаны</a></li>
-		<li><a href="#">Дан автоответ</a></li>
+		<li><a href="#">Дан автоответ</a> <span>829</span></li>
 		<li><a href="#">Статистика</a></li>
-	
+
 	</ul>
 
 
@@ -44,124 +41,149 @@
 <td width="1%" valign="top">
 </td>
 <td width="50%" valign="top">
-	<div id="number"> Обращение: №@Model.number от @Model.createdAt </div>
-	
-	<div id="text">  
+	<div id="number"><h2>Обращение:  №@Model.number от @Model.createdAt </h2> </div>
+	<br>
+	<div id="text">
 
 		<div id="hd">
 		<h3>ТЕКСТ ОБРАЩЕНИЯ</h3>
 		</div>
-		
+
 	<hr>
 
 		<div id="obr">
-		<p>
-		    @Html.Raw(ViewBag.Text)
-		</p>
+            <p>
+                @Html.Raw(ViewBag.Text)
+            </p>
+
+		<a href="#"><div id="unpuck" >Развернуть статью  <img src="~/Content/img/unp.png" alt="unpuck" align="right" style="margin-top: -5px;"></div></a>
 		</div>
 
 	</div>
 <br><br>
-	<div id="feedback">  
+	<div id="feedback">
 
 		<div id="hdf">
 		<h3>ОТВЕТ</h3>
 		</div>
-		
+
 		<hr>
-         
+
 		<div id="feed">
 		<p>
-		Авто
-		
+		<img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;"> &nbsp; Автоданные для подставновки:
+								<span class="autocomplete-data">
+									<a href="#" data-tag='fio'> Иванов Иван Иванович </a>
+								</span>
+
+							</p>
+
+							<br>
+							<form name="test" method="post" action="input1.php">
+								<textarea placeholder="Введите ответ на обращение" name="comment" class="user-commnet"></textarea>
+
+<p>
+		<img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;">  &nbsp;  Автоданные для подставновки: <span class="autocomplete-data">
+                                                                                                                                              <a href="#" data-tag='fio'> @Html.Raw(ViewBag.Text) </a>
+								</span>
+
 		</p>
-		
-		
-		<form name="test" method="post" action="input1.php">
-		<textarea placeholder="Введите ответ на обращение" name="comment"></textarea>
-			<p>
-			<input type="reset" value="Очистить">
+
+	<p style="padding-top: 7px;" align="right">
+
+
 			<input type="submit" value="Отправить">
 			</p>
-			</form>
-		
-		</div>
+							</form>
 
-	</div>
+						</div>
 
-<br>
+					</div>
 
-<div id="ans">  
+					<br>
 
-		<div id="hds">
-		<h3>ИСПОЛЬЗУЙТЕ ШАБЛОНЫ ОТВЕТОВ</h3>
-		</div>
-		
-	<hr>
+					<div id="ans">
 
-		<div id="shab">
-		<p>
-		Информируем вас о том, что согласно письму Федеральной службы безопасности Российской Федерации от 07.09.2018 №149/7/6-363 возможность использования схемы ЭП, соответствующей ГОСТ Р 34.10-2001 «Информационная технология. Криптографическая защита информации. Процессы формирования и проверки электронной цифровой подписи» (далее – ГОСТ-2001), для формирования ЭП продлевается до 31.12.2019.
-		</p></div>
-		
-			<div id="shab">	<p>
-		Информируем вас о том, что согласно письму Федеральной службы безопасности Российской Федерации от 07.09.2018 №149/7/6-363 возможность использования схемы ЭП, соответствующей ГОСТ Р 34.10-2001 «Информационная технология. Криптографическая защита информации. Процессы формирования и проверки электронной цифровой подписи» (далее – ГОСТ-2001), для формирования ЭП продлевается до 31.12.2019.
-		</p></div>
-		
-		
-		
+						<div id="hds">
+							<h3>ИСПОЛЬЗУЙТЕ ШАБЛОНЫ ОТВЕТОВ</h3>
+						</div>
 
-	</div>
+						<hr>
+
+						<div id="shab">
+							<div ><img src="~/Content/img/add.png" alt="solomon" width="25px" align="left"></div><p> Информируем вас [fio] о том, что согласно письму Федеральной службы безопасности Российской Федерации от 07.09.2018 №149/7/6-363 возможность использования схемы ЭП, соответствующей ГОСТ Р 34.10-2001 «Информационная технология. Криптографическая защита информации. Процессы формирования и проверки электронной цифровой подписи» (далее – ГОСТ-2001), для формирования ЭП продлевается до 31.12.2019. </p>
+						</div>
+
+						<div id="shab">
+							<div ><img src="~/Content/img/add.png" alt="solomon" width="25px" align="left"></div><p> Информируем вас о том, что согласно письму Федеральной службы безопасности Российской Федерации от 07.09.2018 №149/7/6-363 возможность использования схемы ЭП, соответствующей ГОСТ Р 34.10-2001 «Информационная технология. Криптографическая защита информации. Процессы формирования и проверки электронной цифровой подписи» (далее – ГОСТ-2001), для формирования ЭП продлевается до 31.12.2019. </p>
+						</div>
 
 
-</td>
-<td width="1%" valign="top">
-</td>
-<td width="24%" valign="top">
 
-	<div id="rgth">
+
+					</div>
+
+
+				</td>
+				<td width="1%" valign="top">
+				</td>
+				<td width="24%" valign="top">
+
+					<div id="rgth">
 			<div id="ost">
 			<p>
 			ОСТАЛОСЬ ДНЕЙ НА ОТВЕТ <span>24</span>
 
 			</p>
 
-			</div>
-			<br><br>
+			</div><br>
+			<br><p style="display: block: text-align: center; padding-left: 30px;"> <img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;">  &nbsp; Рекомендуется переслать письмо в: </p>
+			<br>
 			<div align="center">
 			<select name="theme">
-			<option value="dr">Министерство дорожного хозяйства</option>
+			<option value="dr">Минестерство дорожного хозяйства</option>
 			<option value="mz">Министерство здравоохранения</option>
 			<option value="mer">Глава администрации</option>
 				<option value="g">Бабушке на деревню</option>
 			</select><br><br>
-			<p><input type="submit" value="ПЕРЕСЛАТЬ"></p>
+			<p style="padding-right: 25px;"  align="right"><input type="submit" value="ПЕРЕСЛАТЬ"></p>
 			</div>
 			<br>
 	</div>
-<br>
+<br><br>
+			<div id="hdcon"><h3>ПРАВОВЫЕ ССЫЛКИ</h3>
+				<div id="consul">
+				<hr>
+				<p> <a href="#">Федеральный закон "Об охране окружающей среды" от 10.01.2002 N 7-ФЗ (последняя редакция)</a></p>
+				<p> <a href="#">ГК РФ Статья 284. Изъятие земельного участка, который не используется по целевому назначению (в ред. Федерального закона от 03.07.2016 N 354-ФЗ)</a></p>
+				<p> <a href="#">Закон РФ от 30.03.1999 года №52-ФЗ «О санитарно-эпидемиологическом благополучии населения»</a></p>
+				
 
-			<div id="consul">
-			
-			
-			
+			<a href="#"><div id="unpuck" >Развернуть список  <img src="~/Content/img/unp.png" alt="unpuck" align="right" style="margin-top: -5px; margin-right: 10px;"></div></a>
+			<br><br>
+			<hr>
+			<div id="bliz">
+			<p>ПОХОЖИЕ ОБРАЩЕНИЯ <a href="#">4</a></p>
 			</div>
-
-</td>
-
-
-
-
-</tr>
+				</div>
+			</div>
+				</td>
 
 
 
 
-</tr>
+			</tr>
 
 
-</table>
 
-    </div>
-  </body>
+
+			</tr>
+
+
+		</table>
+
+		<script type="text/javascript" src="~/Content/scripts/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="~/Content/scripts/scripts.js"></script>
+</body>
+
 </html>

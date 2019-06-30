@@ -283,3 +283,7 @@ line-height: 30pt;
 }
 
 #bliz a{font-size: 18pt;}
+
+#menu span {
+background-color: #d5dbdf;
+border-radius: 6px;}

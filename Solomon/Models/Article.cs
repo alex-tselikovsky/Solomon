@@ -14,5 +14,7 @@ namespace Solomon.Models
         public DateTime createdAt { get; set; }
         public string number { get; set; }
         public int status { get; set; }
+
+        
     }
 }
