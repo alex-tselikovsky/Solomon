@@ -25,6 +25,7 @@
     <Compile Include="getTextInfo.py" />
     <Compile Include="sameChecker.py" />
     <Compile Include="Solomon_AI_Services.py" />
+    <Compile Include="use_checker.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="lemmatized_ryazan.txt" />
