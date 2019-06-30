@@ -212,7 +212,7 @@ font-size: 24pt;
 #rgth select {width: 85%;
 height: 30px;
 font-size: 14pt;
-color: 535c69;
+color: #535c69;
 }
 
 #rght select option:first-child {
@@ -222,7 +222,7 @@ color: 535c69;
 #rght select option{
 line-height: 30pt;
 font-size: 24pt;
-color: 535c69;}
+color: #535c69;}
 
 
 #rgth  input{padding:12px;
