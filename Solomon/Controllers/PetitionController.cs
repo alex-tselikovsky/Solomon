@@ -12,9 +12,10 @@ namespace Solomon.Controllers
     public class PetitionController : Controller
     {
         // GET: Petition
-        public ActionResult Index( int id=0)
+        public ActionResult Index( int id=2819)
         {
-            Article article = List().FirstOrDefault();
+            var number = id;
+            Article article = DataSource.Articles.FirstOrDefault(el=>el.number==number);
 
             ViewBag.Text = article.description;
             Dictionary<string, SpanInfo[]> aiFacts=new Dictionary<string, SpanInfo[]>();
@@ -40,7 +41,10 @@ namespace Solomon.Controllers
 
                 }
 
-                ViewBag.Text = desc;
+                if (!string.IsNullOrEmpty(desc))
+                {
+                    ViewBag.Text = desc;
+                }
             }
             catch (Exception e)
             {
