@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Text;
+using System.Web;
 using Newtonsoft.Json;
 using Solomon.Models;
 
@@ -20,15 +22,18 @@ namespace Solomon.Helpers
 
         public static string GetFacts(string articleText, string factsUrl) {
             string json =
-                $"{{\"text\":\"{articleText}\"}}";
+                $"{{\"text\":\"{ HttpUtility.JavaScriptStringEncode(articleText)}\"}}";
 
             var httpWebRequest = (HttpWebRequest)WebRequest.Create(factsUrl);
             httpWebRequest.ContentType = "application/json";
             httpWebRequest.Method = "POST";
 
-            using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream())) {
-                streamWriter.Write(json);
-            }
+            byte[] byteArray = Encoding.ASCII.GetBytes(json);
+
+            httpWebRequest.ContentLength = byteArray.Length;
+            Stream dataStream = httpWebRequest.GetRequestStream();
+            dataStream.Write(byteArray, 0, byteArray.Length);
+
 
             string result = null;
             var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
