@@ -21,5 +21,7 @@ namespace Solomon.Controllers {
 
             return View();
         }
+
+        
     }
 }
