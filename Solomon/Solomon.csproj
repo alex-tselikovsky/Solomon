@@ -195,6 +195,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Petition\Article.cshtml" />
     <Content Include="Views\Petition\TestView.cshtml" />
+    <Content Include="Views\Petition\View.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
