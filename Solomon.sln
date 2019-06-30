@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Solomon", "Solomon\Solomon.csproj", "{3F694CA4-44F4-4B0B-8148-DC4F8F03B333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolomonTests", "SolomonTests\SolomonTests.csproj", "{24EBDC8C-3B72-41CD-A4B7-B4CAD6743280}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F694CA4-44F4-4B0B-8148-DC4F8F03B333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F694CA4-44F4-4B0B-8148-DC4F8F03B333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F694CA4-44F4-4B0B-8148-DC4F8F03B333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F694CA4-44F4-4B0B-8148-DC4F8F03B333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24EBDC8C-3B72-41CD-A4B7-B4CAD6743280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24EBDC8C-3B72-41CD-A4B7-B4CAD6743280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24EBDC8C-3B72-41CD-A4B7-B4CAD6743280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24EBDC8C-3B72-41CD-A4B7-B4CAD6743280}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {90457C42-28C8-4651-9E9D-4A3C91C18C4E}
+	EndGlobalSection
+EndGlobal
