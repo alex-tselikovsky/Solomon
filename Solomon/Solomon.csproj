@@ -144,14 +144,25 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\css\index.css" />
     <Content Include="Content\css\site_global.css" />
+    <Content Include="Content\img\add.png" />
+    <Content Include="Content\img\hd.png" />
     <Content Include="Content\img\left-top.svg" />
     <Content Include="Content\img\left.png" />
+    <Content Include="Content\img\left_o.png" />
+    <Content Include="Content\img\left_r.png" />
+    <Content Include="Content\img\lk.png" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\img\pere.png" />
+    <Content Include="Content\img\rob.png" />
+    <Content Include="Content\img\send.png" />
+    <Content Include="Content\img\unp.png" />
     <Content Include="Content\index.css" />
     <Content Include="Content\scripts\jquery-1.8.3.min.js" />
     <Content Include="Content\scripts\jquery.watch.js" />
     <Content Include="Content\scripts\museconfig.js" />
     <Content Include="Content\scripts\museutils.js" />
     <Content Include="Content\scripts\require.js" />
+    <Content Include="Content\scripts\scripts.js" />
     <Content Include="Content\scripts\whatinput.js" />
     <Content Include="Content\site_global.css" />
     <Content Include="favicon.ico" />
@@ -194,8 +205,8 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Petition\Article.cshtml" />
-    <Content Include="Views\Petition\TestView.cshtml" />
-    <Content Include="Views\Petition\View.cshtml" />
+    <Content Include="Views\Petition\AddArticle.cshtml" />
+    <Content Include="Views\Petition\View1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

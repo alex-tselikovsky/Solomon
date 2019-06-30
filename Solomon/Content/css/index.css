@@ -44,16 +44,30 @@ background-color: #ffffff;
 
 }
 
+#number{
+
+display: block;
+background: url(../img/hd.png) left no-repeat #fff;
+border: 2px;
+border-color: #39a8ef;
+}
+#number h2{padding-left: 55px;
+font-size: 14pt;
+line-height: 24pt;
+font-weight: bolder;
+}
+
 #hd {
-background: url(/img/left.png) no-repeat #fff;
+background: url(../img/left.png) no-repeat #fff;
 }
 #hd h3{
 padding-top: 10px;
 padding-left: 20px;
+font-weight: bolder;
 }
 
 
-
+#globalobr{}
 #obr{
 display: block;
 padding: 20px 20px 20px 20px;
@@ -67,6 +81,12 @@ text-align: justify;
 
 #obr span{background-color: #ffe05f}
 
+#obr a{
+color: #0daeff;
+text-decoration: underline;
+}
+
+
 
 
 
@@ -78,11 +98,12 @@ background-color: #ffffff;
 }
 
 #hdf {
-background: url(/img/left.png) no-repeat #fff;
+background: url(../img/left_r.png) no-repeat #fff;
 }
 #hdf h3{
 padding-top: 10px;
 padding-left: 20px;
+font-weight: bolder;
 }
 
 
@@ -97,7 +118,13 @@ padding: 20px 20px 20px 20px;
 color: #383838;
 }
 
-#feed span{background-color: #ffe05f}
+#feed span{
+color: #0daeff;
+}
+#feed span a{
+color: #0daeff;
+text-decoration: underline;
+}
 
 #feed textarea {
 width: 100%;
@@ -106,10 +133,19 @@ min-height: 300px;
 	border		: 1px solid #888;
 }
 
+#feed input{padding:9px;
+width: 220px;
+background: url(../img/send.png) left no-repeat #74a300;
+color: #fff;
+height: 45px;
+text-align: right;
+font-size: 16pt;
+border-radius: 6px;
+}
 
 
 
-#answ {
+#ans {
 display: block;
 width: 100%;
 background-color: #ffffff;
@@ -117,11 +153,12 @@ background-color: #ffffff;
 }
 
 #hds {
-background: url(/img/left.png) no-repeat #fff;
+background: url(../img/left_o.png) no-repeat #fff;
 }
 #hds h3{
 padding-top: 10px;
 padding-left: 20px;
+font-weight: bolder;
 }
 
 
@@ -135,13 +172,13 @@ padding: 20px 20px 20px 20px;
 #shab p{
 color: #383838;
 text-align: justify;
+padding-left: 40px;
 }
 
 #shab span{background-color: #ffe05f}
 
 #rgth{
 display: block;
-margin-top: 17px;
 width: 100%;
 padding-top: 30px;
 background-color: #fff;
@@ -166,17 +203,83 @@ line-height: 30pt;
 
 #ost span
 {
-margin-top: -2px;
 padding: 10px;
 color: #f54819;
 background-color: #fff;
 font-size: 24pt;
 }
 
-#xonsul{
+#rgth select {width: 85%;
+height: 30px;
+font-size: 14pt;
+color: 535c69;
+}
+
+#rght select option:first-child {
+    font-size: 24pt;
+}
+
+#rght select option{
+line-height: 30pt;
+font-size: 24pt;
+color: 535c69;}
+
+
+#rgth  input{padding:12px;
+width: 220px;
+background: url(../img/pere.png) left no-repeat #0daeff;
+color: #fff;
+height: 45px;
+text-align: right;
+font-size: 16pt;
+border-radius: 6px;
+}
+
+
+#consul{
 display: block;
-margin-top: 17px;
+
 width: 100%;
-padding-top: 30px;
+padding-top: 3px;
 background-color: #fff;
 }
+#consul p{
+padding-bottom: 20px;
+padding-left: 20px;
+padding-right: 20px;}
+
+#consul a{
+color: #0daeff;
+text-decoration: underline;
+}
+
+#consul a:hover{
+color: #43caff;
+text-decoration: none;
+}
+
+#hdcon {
+background: url(../img/left.png) no-repeat #fff;
+}
+#hdcon h3{
+padding-top: 10px;
+padding-left: 20px;
+font-weight: bolder;
+}
+
+
+#unpuck{
+display:block;
+width: 170px;
+ margin-left: auto;
+  margin-right: 0;
+
+}
+
+#bliz {
+font-size: 14pt;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+line-height: 30pt;
+}
+
+#bliz a{font-size: 18pt;}

@@ -23,6 +23,7 @@
   <ItemGroup>
     <Compile Include="classifier.py" />
     <Compile Include="getTextInfo.py" />
+    <Compile Include="sameChecker.py" />
     <Compile Include="Solomon_AI_Services.py" />
   </ItemGroup>
   <ItemGroup>

@@ -22,5 +22,17 @@ namespace Solomon.Controllers
         {
             return DataSource.Articles.Take(20);
         }
+
+        [HttpGet]
+        public ActionResult AddPertition()
+        {
+            return View("AddArticle", null);
+        }
+
+        [HttpPost]
+        public ActionResult AddPertition(Article article)
+        {
+            return View("AddArticle", null);
+        }
     }
 }
