@@ -1,4 +1,4 @@
-﻿namespace SolomonTests
+﻿namespace Solomon.Models
 {
     public class Article
     {
@@ -12,10 +12,5 @@
 
 
         public int status { get; set; }
-    }
-
-    public class Rubric
-    {
-        public string name { get; set; }
     }
 }

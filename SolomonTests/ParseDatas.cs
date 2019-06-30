@@ -1,7 +1,7 @@
 ﻿using System;
-using System.IO;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
+using Solomon.Helpers;
+
 /*
  * "addressee": null,
         "answerByPost": null,
@@ -67,12 +67,9 @@ namespace SolomonTests {
         [TestMethod]
         public void ParseSgg()
         {
-            var jsonSerializer = new JsonSerializer();
-
             var path = @"C:\Users\Mikhail\source\repos\SolomonSrc\SolomonTests\one_appeals_stavropol_with_comments.json";
 
-            var reader = new JsonTextReader(new StreamReader(path));
-            var result = jsonSerializer.Deserialize<Article[]>(reader);
+            ArticleParser.ParseArticles(path);
         }
     }
 }
