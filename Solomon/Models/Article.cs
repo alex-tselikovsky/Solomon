@@ -12,7 +12,7 @@ namespace Solomon.Models
         public string description { get; set; }
         public string authorName { get; set; }
         public DateTime createdAt { get; set; }
-        public string number { get; set; }
+        public int number { get; set; }
         public int status { get; set; }
 
         
