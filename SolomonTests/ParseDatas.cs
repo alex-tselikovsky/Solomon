@@ -83,16 +83,6 @@ namespace SolomonTests {
             Console.WriteLine(result);
         }
 
-        public class AIDatas
-        {
-            public int[][] spans { get; set; }
-            public Fact facts { get; set; } 
-        }
-
-        public class Fact
-        {
-
-        }
         /*
          * {
     "NamesExtractor": [{
