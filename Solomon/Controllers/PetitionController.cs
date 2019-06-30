@@ -18,9 +18,13 @@ namespace Solomon.Controllers
             return View("Article", article);
         }
 
-        public IEnumerable<Article> List()
-        {
+        public IEnumerable<Article> List() {
             return DataSource.Articles.Take(20);
         }
+
+        //public IEnumerable<Article> AutoInsetInfos() {
+            
+
+        //}
     }
 }
