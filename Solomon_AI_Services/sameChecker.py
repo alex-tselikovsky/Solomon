@@ -5,14 +5,16 @@ import  json
 
 class Checker(object):
     
-    def __init__(self, texts):
+    def __init__(self):
+      pass
+
+    def init(self, texts):
         self.texts = texts
         f = open('stopwords.txt','r', encoding='utf-8')
         stopwords_ru = f.read().splitlines()
         f.close()
         self.tf = TfidfVectorizer(analyzer='word', ngram_range=(1,3), min_df = 0, stop_words = stopwords_ru)
         self.tfidf_matrix =  self.tf.fit_transform(texts)
-        
 
     def find_index_of_similar(self, text, top_n = 5, min_sim=0.8):
         cosine_similarities = linear_kernel(self.tf.transform([text]),  self.tfidf_matrix).flatten()

@@ -4,25 +4,25 @@
 
 <head>
 
-    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Solomon</title>
-    <!-- CSS -->
+	<title>Solomon</title>
+	<!-- CSS -->
 
 
-    <link rel="stylesheet" type="text/css" href="~/Content/css/site_global.css?crc=444006867" />
-    <link rel="stylesheet" type="text/css" href="~/Content/css/index.css?crc=4249096523" id="pagesheet" />
+	<link rel="stylesheet" type="text/css" href="~/Content/css/site_global.css?crc=444006867" />
+	<link rel="stylesheet" type="text/css" href="~/Content/css/index.css?crc=4249096523" id="pagesheet" />
 </head>
 
 <body>
-    <div id="head">
-        <div style="padding: 12px; float: left;"><img src="~/Content/img/logo.png" alt="solomon"></div><div style="padding: 12px; float:  right;"><img src="~/Content/img/lk.png" width="300px" alt="solomon" style="padding-right: 30px;"></div>
-    </div>
+<div id="head">
+<div style="padding: 12px; float: left;"><img src="~/Content/img/logo.png" alt="solomon"></div><div style="padding: 12px; float:  right;"><img src="~/Content/img/lk.png" width="300px" alt="solomon" style="padding-right: 30px;"></div>
+</div>
 
-    <div id="content">
-
-        <table cellpadding="0" <table cellspacing="0" border="0px" width="100%">
+<div id="content">
+ 
+<table cellpadding="0" <table cellspacing="0" border="0px" width="100%">
 <tr>
 <td width="24%" valign="top">
 	<div id="menu">
@@ -31,7 +31,7 @@
 		<li><a href="#">Обработаны</a></li>
 		<li><a href="#">Дан автоответ</a> <span>829</span></li>
 		<li><a href="#">Статистика</a></li>
-
+	
 	</ul>
 
 
@@ -44,37 +44,37 @@
 <td width="50%" valign="top">
 	<div id="number"><h2>Обращение: №@Model.number от @Model.createdAt </h2> </div>
 	<br>
-	<div id="text">
+	<div id="text">  
 
 		<div id="hd">
 		<h3>ТЕКСТ ОБРАЩЕНИЯ</h3>
 		</div>
-
+		
 	<hr>
 
 		<div id="obr">
             <p>
                 @Html.Raw(ViewBag.Text)
             </p>
-
+	
 		<a href="#"><div id="unpuck" >Развернуть статью  <img src="~/Content/img/unp.png" alt="unpuck" align="right" style="margin-top: -5px;"></div></a>
 		</div>
 
 	</div>
 <br><br>
-	<div id="feedback">
+	<div id="feedback">  
 
 		<div id="hdf">
 		<h3>ОТВЕТ</h3>
 		</div>
-
+		
 		<hr>
 
 		<div id="feed">
 		<p>
-		<img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;"> &nbsp; Автоданные для подставновки:
-								<span class="autocomplete-data">
-									<a href="#" data-tag='fio'> Иванов Иван Иванович </a>
+		<img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;"> &nbsp; Автоданные для подставновки: 
+								<span class="autocomplete-data"> 
+									<a href="#" data-tag='fio'> Иванов Иван Иванович </a> 
 								</span>
 
 							</p>
@@ -82,17 +82,17 @@
 							<br>
 							<form name="test" method="post" action="input1.php">
 								<textarea placeholder="Введите ответ на обращение" name="comment" class="user-commnet"></textarea>
-
+							
 <p>
-		<img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;">  &nbsp;  Автоданные для подставновки: <span class="autocomplete-data">
-                                                                                                                                                        <a href="#" data-tag='fio'> @Html.Raw(ViewBag.Text) </a>
+		<img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;">  &nbsp;  Автоданные для подставновки: <span class="autocomplete-data"> 
+                                                                                                                                                        <a href="#" data-tag='fio'> @Html.Raw(ViewBag.Text) </a> 
 								</span>
-
+		
 		</p>
 
 	<p style="padding-top: 7px;" align="right">
-
-
+			
+			
 			<input type="submit" value="Отправить">
 			</p>
 							</form>

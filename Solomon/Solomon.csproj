@@ -206,9 +206,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Petition\Article.cshtml" />
+    <Content Include="Views\Petition\_Article.cshtml" />
     <Content Include="Views\Petition\AddArticle.cshtml" />
     <Content Include="Views\Petition\View1.cshtml" />
+    <Content Include="Views\Petition\Article.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

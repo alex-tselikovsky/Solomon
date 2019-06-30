@@ -14,7 +14,7 @@ namespace Solomon.Controllers
         // GET: Petition
         public ActionResult Index( int id=0)
         {
-            Article article = List().FirstOrDefault();
+            Article article = List().FirstOrDefault(r=>r.number==id.ToString());
 
             ViewBag.Text = article.description;
             Dictionary<string, SpanInfo[]> aiFacts=new Dictionary<string, SpanInfo[]>();

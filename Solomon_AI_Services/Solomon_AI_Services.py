@@ -64,20 +64,20 @@ def getSpans():
 
     return  json.dumps({"spans":spans, "facts":facts})
 
-import flask
-from sameChecker import Checker
 
+from sameChecker import Checker
+checker = Checker()
 
 @app.route('/updateAnswers',methods=['POST'])
 def updateAnswers():
     text_list = request.get_json()
-    flask.g.Cheker = Checker(text_list)
+    checker.init(text_list)
     return "ok"
 
 @app.route('/getClosestAnswer', methods=['POST'])
 def getClosest():
     text =  request.get_json()["text"]
-    result = flask.g.Checker.find_index_of_similar(text)
+    result =checker.find_index_of_similar(text)
     return  json.dumps(result)
 
 
