@@ -1,0 +1,182 @@
+.html{background-color:#EEF2F4;}
+body{position:relative;min-width:320px;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;}
+#head {display:block;
+width: 100%;
+height: 60px;
+background-color:#535c69;
+}
+
+#content {display: block;
+width: 100%;
+padding-top:40px;
+}
+
+#menu {
+font-size: 16pt;
+color: #535c69;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#menu ul {
+padding-left: 20px;
+}
+
+#menu li {
+line-height: 30pt;
+
+}
+
+#menu li a{
+color: #535c69;
+text-decoration: none;
+}
+
+#menu li a:hover {
+color: #717a84;
+text-decoration: none;
+}
+
+#text {
+display: block;
+width: 100%;
+background-color: #ffffff;
+
+}
+
+#hd {
+background: url(/img/left.png) no-repeat #fff;
+}
+#hd h3{
+padding-top: 10px;
+padding-left: 20px;
+}
+
+
+
+#obr{
+display: block;
+padding: 20px 20px 20px 20px;
+
+}
+
+#obr p{
+color: #383838;
+text-align: justify;
+}
+
+#obr span{background-color: #ffe05f}
+
+
+
+
+#feedback {
+display: block;
+width: 100%;
+background-color: #ffffff;
+
+}
+
+#hdf {
+background: url(/img/left.png) no-repeat #fff;
+}
+#hdf h3{
+padding-top: 10px;
+padding-left: 20px;
+}
+
+
+
+#feed{
+display: block;
+padding: 20px 20px 20px 20px;
+
+}
+
+#feed p{
+color: #383838;
+}
+
+#feed span{background-color: #ffe05f}
+
+#feed textarea {
+width: 100%;
+min-height: 300px;
+	background-color	: #eef2f4;
+	border		: 1px solid #888;
+}
+
+
+
+
+#answ {
+display: block;
+width: 100%;
+background-color: #ffffff;
+
+}
+
+#hds {
+background: url(/img/left.png) no-repeat #fff;
+}
+#hds h3{
+padding-top: 10px;
+padding-left: 20px;
+}
+
+
+
+#shab{
+display: block;
+padding: 20px 20px 20px 20px;
+
+}
+
+#shab p{
+color: #383838;
+text-align: justify;
+}
+
+#shab span{background-color: #ffe05f}
+
+#rgth{
+display: block;
+margin-top: 17px;
+width: 100%;
+padding-top: 30px;
+background-color: #fff;
+}
+#ost
+{
+display: block;
+width: 80%;
+margin: auto;
+padding: 10px 10px 10px 10px;
+background-color: #f54819;
+}
+
+#ost p
+{
+text-align: center;
+color: #fff;
+font-size: 14pt;
+font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+line-height: 30pt;
+}
+
+#ost span
+{
+margin-top: -2px;
+padding: 10px;
+color: #f54819;
+background-color: #fff;
+font-size: 24pt;
+}
+
+#xonsul{
+display: block;
+margin-top: 17px;
+width: 100%;
+padding-top: 30px;
+background-color: #fff;
+}
