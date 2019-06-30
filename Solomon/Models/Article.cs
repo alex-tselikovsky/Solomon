@@ -1,4 +1,6 @@
-﻿namespace Solomon.Models
+﻿using System;
+
+namespace Solomon.Models
 {
     public class Article
     {
@@ -9,8 +11,8 @@
         public Rubric rubric { get; set; }
         public string description { get; set; }
         public string authorName { get; set; }
-
-
+        public DateTime createdAt { get; set; }
+        public string number { get; set; }
         public int status { get; set; }
     }
 }

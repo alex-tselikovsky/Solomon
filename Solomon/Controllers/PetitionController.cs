@@ -14,8 +14,8 @@ namespace Solomon.Controllers
         // GET: Petition
         public ActionResult Index()
         {
-            //Article article 
-            return View("Article",);
+            Article article = List().FirstOrDefault();
+            return View("Article", article);
         }
 
         public IEnumerable<Article> List()
