@@ -131,10 +131,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\AIService.cs" />
     <Compile Include="Helpers\ArticleParser.cs" />
     <Compile Include="Models\Article.cs" />
     <Compile Include="Models\Rubric.cs" />
     <Compile Include="Models\Petition.cs" />
+    <Compile Include="Models\SpanInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
