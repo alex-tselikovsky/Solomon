@@ -24,7 +24,7 @@
 
 <div id="content">
  
-<table cellpadding="0" <table cellspacing="0" border="0px" width="100%">
+<table  border="0px" width="100%">
 <tr>
 <td width="24%" valign="top">
 	<div id="menu">
@@ -56,7 +56,7 @@
 
 		<div id="obr">
 		<p>
-		    @Model.description
+		    @Html.Raw(ViewBag.Text)
 		</p>
 		</div>
 
@@ -162,6 +162,6 @@
 
 </table>
 
-
+    </div>
   </body>
 </html>

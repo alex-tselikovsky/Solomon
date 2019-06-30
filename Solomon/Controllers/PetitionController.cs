@@ -12,9 +12,41 @@ namespace Solomon.Controllers
     public class PetitionController : Controller
     {
         // GET: Petition
-        public ActionResult Index()
+        public ActionResult Index( int id=0)
         {
             Article article = List().FirstOrDefault();
+
+            ViewBag.Text = article.description;
+            Dictionary<string, SpanInfo[]> aiFacts=new Dictionary<string, SpanInfo[]>();
+            try
+            {
+                aiFacts = AIService.GetFacts(article.description);
+
+                ViewBag.Facts = aiFacts;
+
+                var desc = "";
+                var i = 0;
+                foreach (var fact in aiFacts)
+                {
+                    foreach (SpanInfo spanInfo in fact.Value)
+                    {
+                        desc += article.description.Substring(i, spanInfo.span[0])+
+                                "<span title =\"" +fact.Key+" ?\" >"
+                                + article.description.Substring(spanInfo.span[0], spanInfo.span[1])
+                                + "</ span >";
+
+                        i = spanInfo.span[1];
+                    }
+
+                }
+
+                ViewBag.Text = desc;
+            }
+            catch (Exception e)
+            {
+            }
+           
+
             return View("Article", article);
         }
 
