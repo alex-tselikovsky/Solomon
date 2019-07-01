@@ -22,7 +22,7 @@
 
     <div id="content">
 
-        <table cellpadding="0" <table cellspacing="0" border="0px" width="100%">
+        <table cellspacing="0" border="0px" width="100%">
 <tr>
 <td width="24%" valign="top">
 	<div id="menu">
@@ -73,9 +73,17 @@
 		<div id="feed">
 		<p>
 		<img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;"> &nbsp; Автоданные для подставновки:
-								<span class="autocomplete-data">
-									<a href="#" data-tag='fio'> Иванов Иван Иванович </a>
-								</span>
+        <span class="autocomplete-data">
+            @foreach (var extractor in ViewBag.Facts)
+            {
+                foreach (var span in extractor.Value)
+                {
+                    <a href="#" data-tag='fact.Key'> @span.text </a>
+                                                               @Html.Raw(",&nbsp;")
+                }
+            }
+
+        </span>
 
 							</p>
 
@@ -84,9 +92,14 @@
 								<textarea placeholder="Введите ответ на обращение" name="comment" class="user-commnet"></textarea>
 
 <p>
-		<img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;">  &nbsp;  Автоданные для подставновки: <span class="autocomplete-data">
-                                                                                                                                                        <a href="#" data-tag='fio'> @Html.Raw(ViewBag.Text) </a>
-								</span>
+    <img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;">  &nbsp;  Автоданные для подставновки: <span class="autocomplete-data">
+    @foreach (var extractor in ViewBag.Facts) {
+        foreach (var span in extractor.Value) {
+            <a href="#" data-tag='fact.Key'> @span.text </a>
+            @Html.Raw(",&nbsp;")
+        }
+    }
+</span>
 
 		</p>
 
@@ -138,7 +151,7 @@
 			</p>
 
 			</div><br>
-			<br><p style="display: block: text-align: center; padding-left: 30px;"> <img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;">  &nbsp; Рекомендуется переслать письмо в: </p>
+			<br><p style="display: block; text-align: center; padding-left: 30px;"> <img src="~/Content/img/rob.png" alt="solomon" align="left" height="26px" style="margin-top: -10px;">  &nbsp; Рекомендуется переслать письмо в: </p>
 			<br>
 			<div align="center">
 			<select name="theme">
@@ -181,7 +194,7 @@
 
 
 		</table>
-
+        </div>
 		<script type="text/javascript" src="~/Content/scripts/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript" src="~/Content/scripts/scripts.js"></script>
 </body>
