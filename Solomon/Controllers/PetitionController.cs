@@ -14,7 +14,7 @@ namespace Solomon.Controllers
         // GET: Petition
         public ActionResult Index( int id=2860)
         {
-            Article article = List().FirstOrDefault(r=>r.number==id);
+            Article article = DataSource.Articles.FirstOrDefault(r=>r.number==id);
 
             ViewBag.Text = article.description;
             Dictionary<string, SpanInfo[]> aiFacts=new Dictionary<string, SpanInfo[]>();
@@ -24,16 +24,16 @@ namespace Solomon.Controllers
 
                 ViewBag.Facts = article.description;
 
-                var desc = "";
+                var desc = article.description;
                 var i = 0;
                 foreach (var fact in aiFacts)
                 {
                     foreach (SpanInfo spanInfo in fact.Value)
                     {
-                        var oldValue = article.description.Substring(
-                            spanInfo.span[0],spanInfo.span[1]);
+                        var oldValue = desc.Substring(
+                            spanInfo.span[0],spanInfo.span[1]- spanInfo.span[0]);
 
-                        article.description= article.description.Replace(
+                        desc = desc.Replace(
                             oldValue,
                             "<span title =\"" + fact.Key + " ?\" >"+ oldValue
                        
