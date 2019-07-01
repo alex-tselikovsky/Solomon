@@ -22,7 +22,8 @@ namespace Solomon.Controllers
             {
                 aiFacts = AIService.GetFacts(article.description);
 
-                ViewBag.Facts = article.description;
+                ViewBag.Facts = aiFacts;
+                ViewBag.Text = article.description;
 
                 var desc = article.description;
                 var i = 0;
@@ -30,14 +31,14 @@ namespace Solomon.Controllers
                 {
                     foreach (SpanInfo spanInfo in fact.Value)
                     {
-                        var oldValue = desc.Substring(
+                        var oldValue = article.description.Substring(
                             spanInfo.span[0],spanInfo.span[1]- spanInfo.span[0]);
 
                         desc = desc.Replace(
                             oldValue,
                             "<span title =\"" + fact.Key + " ?\" >"+ oldValue
                        
-                                + "</ span >");
+                                + "</span >");
 
                         i = spanInfo.span[1];
                     }
